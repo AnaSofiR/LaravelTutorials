@@ -18,7 +18,7 @@ class Product extends Model
      * $this->attributes['id'] - int - contains the product primary key (id)
      * $this->attributes['name'] - string - contains the product name
      * $this->attributes['price'] - int - contains the product price
-     * * $this->comments - Comment[] - contains the associated comments
+     * $this->comments - Comment[] - contains the associated comments
     */
 
     protected $fillable = ['name','price'];
@@ -26,11 +26,6 @@ class Product extends Model
     public function getId(): int
     {
         return $this->attributes['id'];
-    }
-
-    public function setId($id) : void
-    {
-        $this->attributes['id'] = $id;
     }
 
     public function getName(): string
